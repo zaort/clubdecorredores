@@ -1,0 +1,1 @@
+// whould an articles model be needed in addition to the posts? Would we also need a comments model?
