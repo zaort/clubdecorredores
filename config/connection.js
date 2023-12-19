@@ -1,10 +1,10 @@
-const Sequalize = require('sequalize');
+const Sequelize = require('sequalize');
 require('dotenv').config();
 
 let sequelize;
 // what is JAWSDB_URL?
 if (process.env.JAWSDB_URL) {
- sequelize = const Sequalize(process.env.JAWSDB_URL);
+ sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
  sequelize = new Sequalize(
   process.env.DB_NAME,
