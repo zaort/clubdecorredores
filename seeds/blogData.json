@@ -1,0 +1,19 @@
+{
+ "posts": [
+  {
+   "title": "The Benefits of Regular Running",
+   "description": "Discover the numerous health benefits of incorporating regular running into your lifestyle...",
+   "date_created": "2023-12-31"
+  },
+  {
+   "title": "Training for Your First Triathlon",
+   "description": "Embark on the journey of preparing for your first triathlon and learn essential tips for success...",
+   "date_created": "2024-01-15"
+  },
+  {
+   "title": "Choosing the Right Running Shoes",
+   "description": "Explore the factors to consider when selecting the perfect pair of running shoes for your training sessions...",
+   "date_created": "2024-02-28"
+  }
+ ]
+}

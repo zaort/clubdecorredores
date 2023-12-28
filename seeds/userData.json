@@ -1,1 +1,15 @@
-// do we need this or could ir be created without this file?
+
+{
+ "users": [
+  {
+   "name": "John Doe",
+   "email": "john.doe@example.com",
+   "password": "password123" 
+  },
+  {
+   "name": "Jane Smith",
+   "email": "jane.smith@example.com",
+   "password": "password456"
+  }
+ ]
+}
