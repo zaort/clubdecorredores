@@ -1,0 +1,41 @@
+[
+ {
+  "post_id": 1,
+  "comments": [
+   {
+    "description": "Great article! Running has indeed improved my overall health and well-being.",
+    "date_created": "2024-01-02"
+   },
+   {
+    "description": "I started running last year, and it's amazing how it positively impacted my mental health too.",
+    "date_created": "2024-01-03"
+   }
+  ]
+ },
+ {
+  "post_id": 2,
+  "comments": [
+   {
+    "description": "This is inspiring! Planning to train for my first triathlon this year. Any tips for beginners?",
+    "date_created": "2024-01-16"
+   },
+   {
+    "description": "Triathlon training can be challenging, but the sense of accomplishment is worth it!",
+    "date_created": "2024-01-17"
+   }
+  ]
+ },
+ {
+  "post_id": 3,
+  "comments": [
+   {
+    "description": "I struggle with finding the right shoes. Any recommendations for overpronation?",
+    "date_created": "2024-03-01"
+   },
+   {
+    "description": "Make sure to get a proper fitting at a specialty running store. It made a huge difference for me!",
+    "date_created": "2024-03-02"
+   }
+  ]
+ }
+]

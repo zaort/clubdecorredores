@@ -39,7 +39,7 @@ Post.init(
   timestamps: false,
   freezTableName: true,
   underscores: true,
-  modelName: 'project',
+  modelName: 'post',
  }
 );
 

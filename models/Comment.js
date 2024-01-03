@@ -29,13 +29,20 @@ Comment.init(
     key: 'id',
    },
   },
+  post_id: {
+   type: DataTypes.INTEGER,
+   references: {
+    model: 'post',
+    key: 'id',
+   },
+  },
  },
  {
   sequelize,
   timestamps: false,
   freezTableName: true,
   underscores: true,
-  modelName: 'project',
+  modelName: 'comment',
  }
 );
 

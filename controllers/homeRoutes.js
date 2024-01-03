@@ -1,6 +1,6 @@
 // PENDING TO CHECK THE REQUIRED CONNECTION WITH THR MODELS AND ANY INCONVENIENCE WITH THE VARIABLE NAMES.
 const router = require('express').Router();
-const { Posts, User } = require('../models');
+const { Post, User } = require('../models');
 const middleAuth = require('../utils/authentication');
 const { route } = require('./api');
 
@@ -8,11 +8,11 @@ const { route } = require('./api');
 router.get('/', async (req, res) => {
  try {
   // Get all posts and JOIN with user data
-  const postsData = await Posts.findAll({
+  const postsData = await Post.findAll({
    include: [
     {
      model: User,
-     attributred: ['name'],
+     attributes: ['name'],
     },
    ],
   });
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
   // Pass serialized data and session flag into template
   res.render('homepage', {
    posts,
-   loggedIn: req, sessuin.loggedIn
+   loggedIn: req.session.loggedIn
   });
  } catch (err) {
   res.status(500).json(err);
@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
 // Route to view an specific post
 router.get('/post/:id', async (req, res) => {
  try {
-  const postData = await Posts.findByPk(req.params.id, {
+  const postData = await Post.findByPk(req.params.id, {
    include: [
     {
      model: User,
@@ -54,12 +54,12 @@ router.get('/post/:id', async (req, res) => {
 });
 
 // Use middleware to prevent access to route
-route.get('/profile', middleAuth, async (req, res) => {
+router.get('/profile', middleAuth, async (req, res) => {
  try {
   // Find the logged in user based on the session ID
   const userInfo = await User.findByPk(req.session.user_id, {
    attributes: { exclude: ['password'] },
-   include: [{ model: Posts }],
+   include: [{ model: Post }],
    //CHECK ON ABOVE SYNTAX
   });
 

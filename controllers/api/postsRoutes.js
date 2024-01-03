@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Posts } = require('../../models');
+const { Post } = require('../../models');
 const middleAuth = require('../../utils/authentication');
 
 // POST route to ctreatr a post/article
@@ -7,7 +7,7 @@ const middleAuth = require('../../utils/authentication');
 
 router.post('/', middleAuth, async (req, res) => {
  try {
-  const newBlogPost = await Posts.create({
+  const newBlogPost = await Post.create({
    ...req.body,
    user_id: req.session.user_id,
   });
@@ -21,7 +21,7 @@ router.post('/', middleAuth, async (req, res) => {
 // ROUTE TO DELETE A POST/ARTICLE
 router.delete('/:id', middleAuth, async (req, res) => {
  try {
-  const postData = await Posts.destroy({
+  const postData = await Post.destroy({
    where: {
     id: req.params.id,
     user_id: req.session.user_id,
