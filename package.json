@@ -5,7 +5,11 @@
  "main": "server.js",
  "scripts": {
   "start": "node server.js",
-  "seed": "node seeds/seed.js"
+  "start": "node server.js",
+  "seed": "NODE_ENV=production node_modules/.bin/sequelize db:seed:all",
+  "postinstall": "npm install --production=false"
+},
+
  },
  "keywords": [],
  "authot": "zaort",
