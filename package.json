@@ -10,7 +10,6 @@
   "postinstall": "npm install --production=false"
 },
 
- },
  "keywords": [],
  "authot": "zaort",
  "license": "MIT",
