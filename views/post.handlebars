@@ -18,13 +18,15 @@
   </div>
  </form>
  {{#if Comments.length}}
- <div class="col-md-4 comment-list">
+ <div class="col-md-10 comment-list">
   <h3>Comments:</h3>
    {{#each Comments as |Comment| }}
    <div class="row mb-2">
-    <h4>{{Comment.User.name}}</h4>
-    <p>{{Comment.description}}</p>
-    <p>Date published: {{format_date Comment.date_created}}</p>
+    <div>
+     <h4>{{Comment.User.name}}</h4>
+     <p>{{Comment.description}}</p>
+     <p>Date published: {{format_date Comment.date_created}}</p>
+    </div>
    </div>
    {{/each}}
  </div>
