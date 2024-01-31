@@ -1,6 +1,6 @@
 // PENDING TO CHECK THE REQUIRED CONNECTION WITH THR MODELS AND ANY INCONVENIENCE WITH THE VARIABLE NAMES.
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const middleAuth = require('../utils/authentication');
 const { route } = require('./api');
 
@@ -38,12 +38,12 @@ router.get('/post/:id', async (req, res) => {
     {
      model: User,
      attributes: ['name'],
-    },
+    }, { model: Comment, include: { model: User } },
    ],
   });
 
   const post = postData.get({ plain: true });
-
+  console.log(post);
   res.render('post', {
    ...post,
    loggedIn: req.session.loggedIn

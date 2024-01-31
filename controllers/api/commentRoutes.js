@@ -3,9 +3,10 @@ const { Comment } = require('../../models');
 const middleAuth = require('../../utils/authentication');
 
 // POST route to ctreate a comment
-// How do we know which comments can be delited by that user, with id but where does the logic ad connections should be?
+// How do we know which comments can be deleted by that user, with id but where does the logic ad connections should be?
 
 router.post('/', middleAuth, async (req, res) => {
+ console.log("created comment");
  try {
   const newPostComment = await Comment.create({
    ...req.body,
@@ -14,6 +15,7 @@ router.post('/', middleAuth, async (req, res) => {
 
   res.status(200).json(newPostComment);
  } catch (err) {
+  console.log(err);
   res.status(400).json(err);
  }
 });

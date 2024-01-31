@@ -7,7 +7,7 @@ const loginHandler = async (event) => {
 
  if (email && password) {
   // POST request to the API endpoint. How was this endpoint/API created and defined as below?
-  const response = await fetch('/api/users/login', {
+  const response = await fetch('/api/user/login', {
    method: 'POST',
    body: JSON.stringify({ email, password }),
    headers: { 'Content-Type': 'application/json' },
@@ -30,7 +30,7 @@ const signupHandler = async (event) => {
  const password = document.querySelector('#password-signup').value.trim();
 
  if (name && email && password) {
-  const response = await fetch('/api/users', {
+  const response = await fetch('/api/user', {
    method: 'POST',
    body: JSON.stringify({ name, email, password }),
    headers: { 'Content-Type': 'application/json' }
