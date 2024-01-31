@@ -6,8 +6,7 @@
  "scripts": {
   "start": "node server.js",
   "start": "node server.js",
-  "seed": "NODE_ENV=production node_modules/.bin/sequelize db:seed:all",
-  "postinstall": "npm install --production=false"
+  "seed": "NODE_ENV=production node_modules/.bin/sequelize db:seed:all"
 },
 
  "keywords": [],
